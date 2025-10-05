@@ -1,5 +1,6 @@
 
 #include "src/system/physical/imu.h"
+#include "src/system/utils/microlzw.h"
 
 namespace modes::nudz {
 
@@ -17,6 +18,7 @@ template<typename ImageType> struct NudzScrollImageMode : public BasicMode
     float maxSpeed = 0.5f;
     uint32_t decal;
     uint32_t last_tick;
+    std::vector<uint32_t> rgbImage;
   };
 
   static void on_enter_mode(auto& ctx)
@@ -24,6 +26,14 @@ template<typename ImageType> struct NudzScrollImageMode : public BasicMode
     // reset stateful events
     ctx.state.decal = 0;
     ctx.state.last_tick = 0;
+    if(ImageType::lzwCompress)
+    {
+      ctx.state.rgbImage.resize(ImageType::width * ImageType::height, 0);
+      mlzw_decompress(reinterpret_cast<const int *>(ImageType::rgbData),
+                      ImageType::lzwCompressSize,
+                      reinterpret_cast<char *>(&ctx.state.rgbImage[0]),
+                      4096);
+    }
   }
 
   static void loop(auto& ctx)
@@ -53,24 +63,26 @@ template<typename ImageType> struct NudzScrollImageMode : public BasicMode
     uint16_t imHeight = ImageType::height;
     uint32_t w = std::min(uint32_t(ctx.lamp.maxWidth + 1), uint32_t(imWidth));
     uint32_t h = std::min(uint32_t(ctx.lamp.maxHeight), uint32_t(imHeight));
-    // const uint32_t *simage = image();
+    const uint32_t *rgbData = ImageType::rgbData;
+    if(ImageType::lzwCompress)
+      rgbData = &ctx.state.rgbImage[0];
     for (uint32_t y = 0; y < h; ++y)
       for (uint32_t x = 0; x < w; ++x)
-        ctx.lamp.setPixelColorXY(x, y, ImageType::rgbData[y * imWidth + (x + decal) % imWidth]);
+        ctx.lamp.setPixelColorXY(x, y, rgbData[y * imWidth + (x + decal) % imWidth]);
   }
 
   static constexpr bool hasCustomRamp = true;
 };
 
-#include "heineken_image.hpp"
+#include "heineken_comp.hpp"
 
 typedef NudzScrollImageMode<HeinekenImageTy> NudzHeinekenMode;
 
-#include "huit_six_image.hpp"
+#include "huit_six_comp.hpp"
 
 typedef NudzScrollImageMode<Huit_sixImageTy> NudzHuitSixMode;
 
-#include "violonsaouls_image.hpp"
+#include "violonsaouls_comp.hpp"
 
 struct NudzViolonsaoulsMode : public NudzScrollImageMode<ViolonsaoulsImageTy>
 {
@@ -80,6 +92,7 @@ struct NudzViolonsaoulsMode : public NudzScrollImageMode<ViolonsaoulsImageTy>
     float maxSpeed = 0.5f;
     uint32_t decal;
     uint32_t last_tick;
+    std::vector<uint32_t> rgbImage;
   };
 };
 

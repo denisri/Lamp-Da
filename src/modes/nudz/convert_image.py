@@ -25,6 +25,8 @@ with open(out_src, 'w') as of:
     print(f'''    struct {out_cls} {{
       static constexpr uint16_t width = {image.width};
       static constexpr uint16_t height = {image.height};
+      static constexpr bool lzwCompress = false;
+      static constexpr uint32_t lzwCompressSize = 0;
       static constexpr uint32_t rgbData[] = {{ ''', file=of)
     i = 0
     for y in range(sz[1]):
