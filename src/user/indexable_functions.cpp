@@ -33,7 +33,8 @@ namespace user {
 using NudzModes = modes::GroupFor<modes::nudz::NudzHeinekenMode,
                                   modes::nudz::NudzHuitSixMode,
                                   modes::nudz::NudzViolonsaoulsMode,
-                                  modes::nudz::NudzBeerGlassMode>;
+                                  modes::nudz::NudzBeerGlassMode,
+                                  modes::nudz::NudzFDCMapMode>;
 
 using ManagerTy = modes::ManagerFor<modes::FixedModes,
                                     // modes::MiscFixedModes,
