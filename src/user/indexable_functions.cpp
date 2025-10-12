@@ -2,6 +2,10 @@
 #ifndef LMBD_SIMPLE_EMULATOR
 #define NUDZ_MODES_ENABLED
 
+// #ifndef NUDZ_MODES_ENABLED
+// #define NUDZ_MODES_ENABLED
+// #endif
+
 #include <cstdint>
 
 #include "src/system/logic/behavior.h"
