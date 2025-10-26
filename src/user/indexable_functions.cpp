@@ -28,7 +28,7 @@
 #include "src/modes/legacy/legacy_modes.hpp"
 
 #ifdef NUDZ_MODES_ENABLED
-#include "src/modes/nudz/nudz_scrollimage.hpp"
+#include "src/modes/custom/nudz/nudz_scrollimage.hpp"
 #endif
 
 namespace user {
@@ -38,11 +38,11 @@ namespace user {
 //
 
 #ifdef NUDZ_MODES_ENABLED
-using NudzModes = modes::GroupFor<modes::nudz::NudzHeinekenMode,
-                                  modes::nudz::NudzHuitSixMode,
-                                  modes::nudz::NudzViolonsaoulsMode,
-                                  modes::nudz::NudzBeerGlassMode,
-                                  modes::nudz::NudzFDCMapMode>;
+using NudzModes = modes::GroupFor<modes::custom::nudz::NudzHeinekenMode,
+                                  modes::custom::nudz::NudzHuitSixMode,
+                                  modes::custom::nudz::NudzViolonsaoulsMode,
+                                  modes::custom::nudz::NudzBeerGlassMode,
+                                  modes::custom::nudz::NudzFDCMapMode>;
 
 using ManagerTy = modes::ManagerFor<modes::FixedModes,
                                     // modes::MiscFixedModes,
