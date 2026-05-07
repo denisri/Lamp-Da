@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['magenta_0',['Magenta',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba78610d3397c04d4771be647cd5cb6e26',1,'lampda::modes::colors']]],
+  ['maroon_1',['Maroon',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08bad26b58e34fb256549f5ba257bc6bbedb',1,'lampda::modes::colors']]],
+  ['mediumaquamarine_2',['MediumAquamarine',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba0a59f212d6f4930d4dd1e1136015e810',1,'lampda::modes::colors']]],
+  ['mediumblue_3',['MediumBlue',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba55160fb2b3ac92cd1d44bf0773c495a7',1,'lampda::modes::colors']]],
+  ['mediumorchid_4',['MediumOrchid',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08baab956fee113648d53c9d4980e643ac3c',1,'lampda::modes::colors']]],
+  ['mediumpurple_5',['MediumPurple',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba2c2fdcca7bcaa79c57c37f05fd2e7c98',1,'lampda::modes::colors']]],
+  ['mediumseagreen_6',['MediumSeaGreen',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08baa95b644aa5dd03e7423e88f093b57550',1,'lampda::modes::colors']]],
+  ['mediumslateblue_7',['MediumSlateBlue',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba6bd36471fc1a474214effd3bc8313daf',1,'lampda::modes::colors']]],
+  ['mediumspringgreen_8',['MediumSpringGreen',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08baf4a3722bd3191ade956686b4c1c1a7c9',1,'lampda::modes::colors']]],
+  ['mediumturquoise_9',['MediumTurquoise',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08baabeed842e644ebdd31f5cac183de2a0c',1,'lampda::modes::colors']]],
+  ['mediumvioletred_10',['MediumVioletRed',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba3bacc39706e6dcb8b3f2ed53067f6929',1,'lampda::modes::colors']]],
+  ['mercuryvapor_11',['MercuryVapor',['../namespacelampda_1_1modes_1_1colors.html#a8a56d683fba54f268698765528af4ab5abbfdae3aaafdf19088c7cec704d9193f',1,'lampda::modes::colors']]],
+  ['metalhalide_12',['MetalHalide',['../namespacelampda_1_1modes_1_1colors.html#a8a56d683fba54f268698765528af4ab5a4afb7bcd05f3ec6b90ce86b18038c23b',1,'lampda::modes::colors']]],
+  ['midnightblue_13',['MidnightBlue',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08baef4c1a1d2686f254bd9df217f7d4fc98',1,'lampda::modes::colors']]],
+  ['mintcream_14',['MintCream',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba63b4db35edbca005a73ab205d0c25b84',1,'lampda::modes::colors']]],
+  ['mistyrose_15',['MistyRose',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08ba42609e599db99281ded29fe75f107143',1,'lampda::modes::colors']]],
+  ['moccasin_16',['Moccasin',['../namespacelampda_1_1modes_1_1colors.html#af7c29eff69c944a4af998b56a3d2c08baa38092cc3c9df05fdbce5ec61a0751c9',1,'lampda::modes::colors']]]
+];
