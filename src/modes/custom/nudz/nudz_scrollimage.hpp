@@ -347,6 +347,23 @@ struct NudzLadderWellMode : public NudzScrollImageMode<LadderImageTy, Climb_mask
   };
 };
 
+#include "src/generated/fdc.hpp"
+
+struct NudzFDCMapMode : public NudzScrollImageMode<FdcImageTy>
+{
+  struct StateTy
+  {
+    float minSpeed = -0.1f;
+    float maxSpeed = 0.1f;
+    bool randomScroll = true;
+    uint32_t xdecal;
+    uint32_t ydecal;
+    uint32_t last_tick;
+    int8_t xdirection = 1;
+    int8_t ydirection = 1;
+  };
+};
+
 /**
  * \brief Display a glass of beer, reactive to gravity.
  * The user ramp changes the beer level
