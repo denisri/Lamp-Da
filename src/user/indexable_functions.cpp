@@ -2,9 +2,9 @@
 #ifndef LMBD_SIMPLE_EMULATOR
 
 /// Add the nudz mode the compilation
-// #ifndef NUDZ_MODES_ENABLED
-// #define NUDZ_MODES_ENABLED
-// #endif
+#ifndef NUDZ_MODES_ENABLED
+#define NUDZ_MODES_ENABLED
+#endif
 
 #include <cstdint>
 
@@ -41,7 +41,8 @@ namespace custom {
 using NudzModes = modes::GroupFor<modes::custom::nudz::NudzHeinekenMode,
                                   modes::custom::nudz::NudzHuitSixMode,
                                   modes::custom::nudz::NudzViolonsaoulsMode,
-                                  modes::custom::nudz::NudzBeerGlassMode>;
+                                  modes::custom::nudz::NudzBeerGlassMode,
+                                  modes::custom::nudz::NudzFDCMapMode>;
 }
 
 using ManagerTy = modes::ManagerForHiddenGroups<
