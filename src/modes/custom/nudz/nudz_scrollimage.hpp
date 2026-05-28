@@ -324,6 +324,10 @@ struct NudzViolonsaoulsMode : public NudzScrollImageMode<ViolonsaoulsImageTy>
 #include "src/generated/ladder.hpp"
 #include "src/generated/climb_mask_anim_00.hpp"
 
+/**
+ * \brief Display a scrolling ladder well with a guy climbing the ladder.
+ * User ramp changes scroll speed and direction
+ */
 struct NudzLadderWellMode : public NudzScrollImageMode<LadderImageTy, Climb_mask_anim_00ImageTy>
 {
   struct StateTy
