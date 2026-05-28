@@ -321,28 +321,6 @@ struct NudzViolonsaoulsMode : public NudzScrollImageMode<ViolonsaoulsImageTy>
   };
 };
 
-#include "src/generated/fdc.hpp"
-
-struct NudzFDCMapMode : public NudzScrollImageMode<FdcImageTy>
-{
-  struct StateTy
-  {
-    std::vector<float> minSpeed = {-0.1f};
-    std::vector<float> maxSpeed = {0.1f};
-    std::vector<bool> randomScroll = {true};
-    std::vector<uint32_t> xdecal = {0};
-    std::vector<uint32_t> ydecal = {0};
-    std::vector<uint32_t> last_tick = {0};
-    std::vector<int8_t> xdirection = {1};
-    std::vector<int8_t> ydirection = {1};
-    std::vector<bool> framesMirror = {false}; ///< frames are mirrores at end of animation
-    std::vector<NudzScrollImageMode::FrameSyncMode> syncFrame = {
-      NudzScrollImageMode::Y}; /// frame sync on 1st image
-    std::vector<uint32_t> frame = {0};          /// current animation frame
-    std::vector<uint32_t> last_frame_tick = {0};
-  };
-};
-
 #include "src/generated/ladder.hpp"
 #include "src/generated/climb_mask_anim_00.hpp"
 
