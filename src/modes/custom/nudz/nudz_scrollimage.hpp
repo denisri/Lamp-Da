@@ -324,9 +324,7 @@ struct NudzViolonsaoulsMode : public NudzScrollImageMode<ViolonsaoulsImageTy>
 #include "src/generated/ladder.hpp"
 #include "src/generated/climb_mask_anim_00.hpp"
 
-struct NudzLadderWellMode : public NudzScrollImageMode<
-  LadderImageTy,
-  Climb_mask_anim_00ImageTy>
+struct NudzLadderWellMode : public NudzScrollImageMode<LadderImageTy, Climb_mask_anim_00ImageTy>
 {
   struct StateTy
   {
@@ -339,9 +337,8 @@ struct NudzLadderWellMode : public NudzScrollImageMode<
     std::vector<int8_t> xdirection = {0, 0};
     std::vector<int8_t> ydirection = {1, 0};
     std::vector<bool> framesMirror = {false, true};
-    std::vector<NudzScrollImageMode::FrameSyncMode> syncFrame = {
-      NudzScrollImageMode::Y, NudzScrollImageMode::Y};
-    std::vector<uint32_t> frame = {0, 0};          /// current animation frame
+    std::vector<NudzScrollImageMode::FrameSyncMode> syncFrame = {NudzScrollImageMode::Y, NudzScrollImageMode::Y};
+    std::vector<uint32_t> frame = {0, 0};
     std::vector<uint32_t> last_frame_tick = {0, 0};
   };
 };
