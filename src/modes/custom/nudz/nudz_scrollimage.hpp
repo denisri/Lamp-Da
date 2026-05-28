@@ -353,14 +353,18 @@ struct NudzFDCMapMode : public NudzScrollImageMode<FdcImageTy>
 {
   struct StateTy
   {
-    float minSpeed = -0.1f;
-    float maxSpeed = 0.1f;
-    bool randomScroll = true;
-    uint32_t xdecal;
-    uint32_t ydecal;
-    uint32_t last_tick;
-    int8_t xdirection = 1;
-    int8_t ydirection = 1;
+    std::vector<float> minSpeed = {-0.1f};
+    std::vector<float> maxSpeed = {0.1f};
+    std::vector<bool> randomScroll = {true};
+    std::vector<uint32_t> xdecal = {0};
+    std::vector<uint32_t> ydecal = {0};
+    std::vector<uint32_t> last_tick = {0};
+    std::vector<int8_t> xdirection = {1};
+    std::vector<int8_t> ydirection = {1};
+    std::vector<bool> framesMirror = {false};
+    std::vector<NudzScrollImageMode::FrameSyncMode> syncFrame = {NudzScrollImageMode::Y};
+    std::vector<uint32_t> frame = {0};
+    std::vector<uint32_t> last_frame_tick = {0};
   };
 };
 
