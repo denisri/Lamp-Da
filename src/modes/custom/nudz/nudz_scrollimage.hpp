@@ -349,6 +349,10 @@ struct NudzLadderWellMode : public NudzScrollImageMode<LadderImageTy, Climb_mask
 
 #include "src/generated/fdc.hpp"
 
+/**
+ * \brief Display the FDC secret map...
+ * User ramp changes scroll speed and direction
+ */
 struct NudzFDCMapMode : public NudzScrollImageMode<FdcImageTy>
 {
   struct StateTy
