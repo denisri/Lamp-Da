@@ -94,21 +94,21 @@ Inheritance diagram for lampda::physical::LedStrip:</div>
  <div class="center">
   <img src="classlampda_1_1physical_1_1LedStrip.png" usemap="#lampda::physical::LedStrip_map" alt=""/>
   <map id="lampda::physical::LedStrip_map" name="lampda::physical::LedStrip_map">
-<area href="classAdafruit__NeoPixel.html" alt="Adafruit_NeoPixel" shape="rect" coords="0,0,158,24"/>
+<area href="classlampda_1_1platform_1_1strip_1_1LampdaStrip.html" title="This class is a lightweight port of the Adafruit_Neopixel library, with compile time buffers to have ..." alt="lampda::platform::strip::LampdaStrip&lt; LedCount, ChannelCount &gt;" shape="rect" coords="0,0,323,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae7ec3785488603c7596474fbaec46040"><td class="memItemLeft" align="right" valign="top"><a id="ae7ec3785488603c7596474fbaec46040" name="ae7ec3785488603c7596474fbaec46040"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LedStrip</b> (int16_t pin, neoPixelType type=NEO_RGB+NEO_KHZ800)</td></tr>
+&#160;</td><td class="memItemRight" valign="bottom"><b>LedStrip</b> (int16_t pin, <a class="el" href="strip__impl_8h.html#a6ff31bc7214a3ae338a80ed6142d69ff">neoPixelType</a> type=NEO_RGB+NEO_KHZ800)</td></tr>
 <tr class="separator:ae7ec3785488603c7596474fbaec46040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8846f48592f53ac517166f9046d62114"><td class="memItemLeft" align="right" valign="top"><a id="a8846f48592f53ac517166f9046d62114" name="a8846f48592f53ac517166f9046d62114"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>show</b> ()</td></tr>
 <tr class="separator:a8846f48592f53ac517166f9046d62114"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5e4ed36665a987c0bc0079e2520feb2"><td class="memItemLeft" align="right" valign="top"><a id="ad5e4ed36665a987c0bc0079e2520feb2" name="ad5e4ed36665a987c0bc0079e2520feb2"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>estimateCurrentDraw</b> ()</td></tr>
-<tr class="separator:ad5e4ed36665a987c0bc0079e2520feb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763ece808268646899a74f94ccbfd4f8"><td class="memItemLeft" align="right" valign="top"><a id="a763ece808268646899a74f94ccbfd4f8" name="a763ece808268646899a74f94ccbfd4f8"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>estimateCurrentDraw</b> () const</td></tr>
+<tr class="separator:a763ece808268646899a74f94ccbfd4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04c6f159d304a291e71ed593a4ed7528"><td class="memItemLeft" align="right" valign="top"><a id="a04c6f159d304a291e71ed593a4ed7528" name="a04c6f159d304a291e71ed593a4ed7528"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setBrightness</b> (uint8_t b)</td></tr>
 <tr class="memdesc:a04c6f159d304a291e71ed593a4ed7528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brightness is an internal counter. <br /></td></tr>
@@ -156,9 +156,6 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getPixelColor</b>
 <tr class="memitem:ad304b29f084ab0ca2936ad7a2b74eff7"><td class="memItemLeft" align="right" valign="top"><a id="ad304b29f084ab0ca2936ad7a2b74eff7" name="ad304b29f084ab0ca2936ad7a2b74eff7"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getPixelColorXY</b> (int16_t x, int16_t y) const</td></tr>
 <tr class="separator:ad304b29f084ab0ca2936ad7a2b74eff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab62cfc91d3e687d9a5d018cccd1a21"><td class="memItemLeft" align="right" valign="top"><a id="abab62cfc91d3e687d9a5d018cccd1a21" name="abab62cfc91d3e687d9a5d018cccd1a21"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>blendPixelColor</b> (uint16_t n, uint32_t color, uint8_t blend)</td></tr>
-<tr class="separator:abab62cfc91d3e687d9a5d018cccd1a21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a889cd8823d832e263d149e09b2fa0e"><td class="memItemLeft" align="right" valign="top"><a id="a2a889cd8823d832e263d149e09b2fa0e" name="a2a889cd8823d832e263d149e09b2fa0e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addPixelColor</b> (uint16_t n, uint32_t color, bool fast=false)</td></tr>
 <tr class="separator:a2a889cd8823d832e263d149e09b2fa0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +226,7 @@ struct&#160;</td><td class="memItemRight" valign="bottom"><b>modes::hardware::La
         <tr>
           <td class="memname">void lampda::physical::LedStrip::begin </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
