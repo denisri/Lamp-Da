@@ -40,6 +40,8 @@ namespace lampda::user {
 namespace custom {
 using NudzModes = modes::GroupFor<modes::custom::nudz::NudzHeinekenMode,
                                   modes::custom::nudz::NudzHuitSixMode,
+                                  modes::custom::nudz::NudzSkullMode,
+                                  modes::custom::nudz::NudzWrongWayMode,
                                   modes::custom::nudz::NudzViolonsaoulsMode,
                                   modes::custom::nudz::NudzBeerGlassMode,
                                   modes::custom::nudz::NudzLadderWellMode>;
