@@ -343,6 +343,14 @@ typedef NudzScrollImageMode<HeinekenImageTy> NudzHeinekenMode;
 
 typedef NudzScrollImageMode<Huit_sixImageTy> NudzHuitSixMode;
 
+#include "src/generated/skull.hpp"
+
+typedef NudzScrollImageMode<SkullImageTy> NudzSkullMode;
+
+#include "src/generated/wrong_way.hpp"
+
+typedef NudzScrollImageMode<Wrong_wayImageTy> NudzWrongWayMode;
+
 #include "src/generated/violonsaouls.hpp"
 
 /**
