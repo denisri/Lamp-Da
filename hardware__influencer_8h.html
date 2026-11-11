@@ -116,9 +116,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a94f99aabf2e0f6d2720c17787a23a1ee"><td class="memItemLeft" align="right" valign="top"><a id="a94f99aabf2e0f6d2720c17787a23a1ee" name="a94f99aabf2e0f6d2720c17787a23a1ee"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_gpios::update_callbacks</b> ()</td></tr>
 <tr class="separator:a94f99aabf2e0f6d2720c17787a23a1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567df7e959bbb3cadea4746e5955631d"><td class="memItemLeft" align="right" valign="top"><a id="a567df7e959bbb3cadea4746e5955631d" name="a567df7e959bbb3cadea4746e5955631d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::time_mocks::reset</b> ()</td></tr>
-<tr class="separator:a567df7e959bbb3cadea4746e5955631d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74feeb10c2c3e4f4a54c0d09f1cc45f9"><td class="memItemLeft" align="right" valign="top"><a id="a74feeb10c2c3e4f4a54c0d09f1cc45f9" name="a74feeb10c2c3e4f4a54c0d09f1cc45f9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::time_mocks::reset</b> (uint32_t startClock=0)</td></tr>
+<tr class="separator:a74feeb10c2c3e4f4a54c0d09f1cc45f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3feb0c147756e3d41213d806fc4ad4c"><td class="memItemLeft" align="right" valign="top"><a id="ae3feb0c147756e3d41213d806fc4ad4c" name="ae3feb0c147756e3d41213d806fc4ad4c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_registers::run_threads</b> ()</td></tr>
 <tr class="separator:ae3feb0c147756e3d41213d806fc4ad4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,7 +129,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_i
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a74695604a69f6d69d5f9db3c52565608"><td class="memItemLeft" align="right" valign="top"><a id="a74695604a69f6d69d5f9db3c52565608" name="a74695604a69f6d69d5f9db3c52565608"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_registers::isDeepSleep</b> = false</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_registers::isDeepSleep</b></td></tr>
 <tr class="separator:a74695604a69f6d69d5f9db3c52565608"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b304c741cf679ba1e4398e45dec6fc3"><td class="memItemLeft" align="right" valign="top"><a id="a5b304c741cf679ba1e4398e45dec6fc3" name="a5b304c741cf679ba1e4398e45dec6fc3"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_registers::cpuTemperature</b></td></tr>
@@ -138,7 +138,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_regi
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_registers::addedAlgoDelay</b></td></tr>
 <tr class="separator:a0e716603d46c6026035997d789e57f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad99a3d4756eb7cee94790025167843f0"><td class="memItemLeft" align="right" valign="top"><a id="ad99a3d4756eb7cee94790025167843f0" name="ad99a3d4756eb7cee94790025167843f0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_registers::shouldStopThreads</b> = false</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_registers::shouldStopThreads</b></td></tr>
 <tr class="separator:ad99a3d4756eb7cee94790025167843f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02ba0e97d9f178fa02e662a4af973795"><td class="memItemLeft" align="right" valign="top"><a id="a02ba0e97d9f178fa02e662a4af973795" name="a02ba0e97d9f178fa02e662a4af973795"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_electrical::powerRailVoltage</b></td></tr>
@@ -161,12 +161,18 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_elec
 <tr class="memitem:ab07945f04f030f0cdbaaf8e99c8641fa"><td class="memItemLeft" align="right" valign="top"><a id="ab07945f04f030f0cdbaaf8e99c8641fa" name="ab07945f04f030f0cdbaaf8e99c8641fa"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_electrical::inputVbusVoltage</b></td></tr>
 <tr class="separator:ab07945f04f030f0cdbaaf8e99c8641fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab79802ca39ebfbba9acc681c7b3756"><td class="memItemLeft" align="right" valign="top"><a id="afab79802ca39ebfbba9acc681c7b3756" name="afab79802ca39ebfbba9acc681c7b3756"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_electrical::inputVbusCurrent</b></td></tr>
+<tr class="separator:afab79802ca39ebfbba9acc681c7b3756"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7a1592e153f4abec77a103ed47f884a"><td class="memItemLeft" align="right" valign="top"><a id="ac7a1592e153f4abec77a103ed47f884a" name="ac7a1592e153f4abec77a103ed47f884a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_electrical::chargeOtgOutput</b></td></tr>
 <tr class="separator:ac7a1592e153f4abec77a103ed47f884a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf3d462c363026afc6bcc677388cb1ab"><td class="memItemLeft" align="right" valign="top"><a id="abf3d462c363026afc6bcc677388cb1ab" name="abf3d462c363026afc6bcc677388cb1ab"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_battery::voltage</b></td></tr>
 <tr class="separator:abf3d462c363026afc6bcc677388cb1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a577ca9818b1cf251b7e60b1090772573"><td class="memItemLeft" align="right" valign="top"><a id="a577ca9818b1cf251b7e60b1090772573" name="a577ca9818b1cf251b7e60b1090772573"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>simulator::mock_battery::current</b></td></tr>
+<tr class="separator:a577ca9818b1cf251b7e60b1090772573"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handle the physical simulation paremeters of a real lamp. </p>

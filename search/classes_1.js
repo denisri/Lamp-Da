@@ -2,11 +2,11 @@ var searchData=
 [
   ['base_0',['Base',['../classlampda_1_1utils_1_1ColorSpace_1_1Base.html',1,'lampda::utils::ColorSpace']]],
   ['basicmode_1',['BasicMode',['../structlampda_1_1modes_1_1BasicMode.html',1,'lampda::modes']]],
-  ['battery_2',['Battery',['../structlampda_1_1power_1_1charger_1_1drivers_1_1Battery.html',1,'lampda::power::charger::drivers']]],
-  ['batterystatus_5ft_3',['BatteryStatus_t',['../structlampda_1_1power_1_1charger_1_1BatteryStatus__t.html',1,'lampda::power::charger']]],
+  ['battery_2',['Battery',['../structlampda_1_1bsp_1_1charger_1_1Battery.html',1,'lampda::bsp::charger']]],
+  ['batterystatus_5ft_3',['BatteryStatus_t',['../structlampda_1_1component_1_1charger_1_1BatteryStatus__t.html',1,'lampda::component::charger']]],
   ['batterystatust_4',['BatteryStatust',['../structbq76905_1_1BQ76905_1_1Regt_1_1BatteryStatust.html',1,'bq76905::BQ76905::Regt']]],
   ['bigfont_5',['BigFont',['../structlampda_1_1modes_1_1draw_1_1text_1_1____private_1_1BigFont.html',1,'lampda::modes::draw::text::__private']]],
-  ['bleelkservice_6',['BLEElkService',['../classlampda_1_1bluetooth_1_1BLEElkService.html',1,'lampda::bluetooth']]],
+  ['blinktracker_6',['BlinkTracker',['../classlampda_1_1logic_1_1battery__blink_1_1BlinkTracker.html',1,'lampda::logic::battery_blink']]],
   ['bq25713_7',['BQ25713',['../classbq25713_1_1BQ25713.html',1,'bq25713']]],
   ['bq25713mock_8',['BQ25713Mock',['../classsimulator_1_1BQ25713Mock.html',1,'simulator']]],
   ['bq76905_9',['BQ76905',['../classbq76905_1_1BQ76905.html',1,'bq76905']]],
@@ -15,5 +15,7 @@ var searchData=
   ['bubblemode_12',['BubbleMode',['../structlampda_1_1modes_1_1automaton_1_1BubbleMode.html',1,'lampda::modes::automaton']]],
   ['bubblety_13',['BubbleTy',['../structlampda_1_1modes_1_1custom_1_1nudz_1_1NudzBeerGlassMode_1_1BubbleTy.html',1,'lampda::modes::custom::nudz::NudzBeerGlassMode']]],
   ['buttonevent_14',['ButtonEvent',['../structlampda_1_1logic_1_1inputs_1_1____private_1_1ButtonEvent.html',1,'lampda::logic::inputs::__private']]],
-  ['buttonstatety_15',['ButtonStateTy',['../structlampda_1_1physical_1_1button_1_1ButtonStateTy.html',1,'lampda::physical::button']]]
+  ['buttoneventqueuelock_15',['ButtonEventQueueLock',['../structlampda_1_1logic_1_1inputs_1_1____private_1_1ButtonEventQueueLock.html',1,'lampda::logic::inputs::__private']]],
+  ['buttonstatelock_16',['ButtonStateLock',['../structlampda_1_1component_1_1button_1_1ButtonStateLock.html',1,'lampda::component::button']]],
+  ['buttonstatety_17',['ButtonStateTy',['../structlampda_1_1component_1_1button_1_1ButtonStateTy.html',1,'lampda::component::button']]]
 ];

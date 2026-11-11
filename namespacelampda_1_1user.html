@@ -120,10 +120,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>power_off_sequence</b
 <tr class="memitem:a2bed2303bf048e21a21fa2e6a8ebb8fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelampda_1_1user.html#a2bed2303bf048e21a21fa2e6a8ebb8fc">brightness_update</a> (const <a class="el" href="namespacelampda.html#ad34e2e456962094642d880a33818962f">lampda::brightness_t</a> brightness)</td></tr>
 <tr class="memdesc:a2bed2303bf048e21a21fa2e6a8ebb8fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the system changes the LED strip brightness.  <br /></td></tr>
 <tr class="separator:a2bed2303bf048e21a21fa2e6a8ebb8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade0579f627d11dc8eff8dc5b91d9afe"><td class="memItemLeft" align="right" valign="top"><a id="aade0579f627d11dc8eff8dc5b91d9afe" name="aade0579f627d11dc8eff8dc5b91d9afe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>sunset_timer_update</b> (const float progress)</td></tr>
-<tr class="memdesc:aade0579f627d11dc8eff8dc5b91d9afe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the sunset timer progresses [0; 1]. <br /></td></tr>
-<tr class="separator:aade0579f627d11dc8eff8dc5b91d9afe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9086987851371577be7407d39032c7"><td class="memItemLeft" align="right" valign="top"><a id="acb9086987851371577be7407d39032c7" name="acb9086987851371577be7407d39032c7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>write_parameters</b> ()</td></tr>
 <tr class="memdesc:acb9086987851371577be7407d39032c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when system wants to write parameters to filesystem. <br /></td></tr>
@@ -153,9 +149,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>read_parameters</b> (
 <tr class="memitem:a42710cdf95b63e4a0d644c0e976b715a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelampda_1_1user.html#a42710cdf95b63e4a0d644c0e976b715a">user_thread</a> ()</td></tr>
 <tr class="memdesc:a42710cdf95b63e4a0d644c0e976b715a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called at each tick of the secondary thread.  <br /></td></tr>
 <tr class="separator:a42710cdf95b63e4a0d644c0e976b715a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c166aecd0393c3af7ee267edb78c9f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelampda_1_1user.html#a7c166aecd0393c3af7ee267edb78c9f4">handle_elk_command</a> (const <a class="el" href="structlampda_1_1utils_1_1ELK_1_1Package.html">utils::ELK::Package</a> &amp;elkControlCommand)</td></tr>
-<tr class="memdesc:a7c166aecd0393c3af7ee267edb78c9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a ELK BLE package.  <br /></td></tr>
-<tr class="separator:a7c166aecd0393c3af7ee267edb78c9f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac67218c3107c337d14aeda5c994b0a3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelampda_1_1user.html#ac67218c3107c337d14aeda5c994b0a3c">handle_user_command</a> (const <a class="el" href="classlampda_1_1common_1_1UserCommand.html">common::UserCommand</a> &amp;setCommand)</td></tr>
+<tr class="memdesc:ac67218c3107c337d14aeda5c994b0a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle user command.  <br /></td></tr>
+<tr class="separator:ac67218c3107c337d14aeda5c994b0a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f610126f49c21bdf457936bc45a9b09"><td class="memItemLeft" align="right" valign="top"><a id="a9f610126f49c21bdf457936bc45a9b09" name="a9f610126f49c21bdf457936bc45a9b09"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_color</b> (const uint8_t color)</td></tr>
 <tr class="separator:a9f610126f49c21bdf457936bc45a9b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,12 +167,12 @@ Variables</h2></td></tr>
 <tr class="memitem:ac78000c01f32a56cd796824358209548"><td class="memItemLeft" align="right" valign="top"><a id="ac78000c01f32a56cd796824358209548" name="ac78000c01f32a56cd796824358209548"></a>
 constexpr uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>minBrightness</b> = 13</td></tr>
 <tr class="separator:ac78000c01f32a56cd796824358209548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfa712b1485ad89bdc243368db288ebb"><td class="memItemLeft" align="right" valign="top"><a id="acfa712b1485ad89bdc243368db288ebb" name="acfa712b1485ad89bdc243368db288ebb"></a>
-static <a class="el" href="classlampda_1_1platform_1_1gpio_1_1DigitalPin.html">platform::gpio::DigitalPin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WhiteColorPin</b> (platform::gpio::DigitalPin::GPIO::gpio6)</td></tr>
-<tr class="separator:acfa712b1485ad89bdc243368db288ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3a5c0150dcec8af3611c36738027643"><td class="memItemLeft" align="right" valign="top"><a id="af3a5c0150dcec8af3611c36738027643" name="af3a5c0150dcec8af3611c36738027643"></a>
-static <a class="el" href="classlampda_1_1platform_1_1gpio_1_1DigitalPin.html">platform::gpio::DigitalPin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>YellowColorPin</b> (platform::gpio::DigitalPin::GPIO::gpio7)</td></tr>
-<tr class="separator:af3a5c0150dcec8af3611c36738027643"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34116b99df798e029db9fb8ec3884c33"><td class="memItemLeft" align="right" valign="top"><a id="a34116b99df798e029db9fb8ec3884c33" name="a34116b99df798e029db9fb8ec3884c33"></a>
+static <a class="el" href="classlampda_1_1hal_1_1gpio_1_1DigitalPin.html">hal::gpio::DigitalPin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WhiteColorPin</b> (hal::gpio::DigitalPin::GPIO::gpio6)</td></tr>
+<tr class="separator:a34116b99df798e029db9fb8ec3884c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609cd31281ee27c10c91c1bf2008bebc"><td class="memItemLeft" align="right" valign="top"><a id="a609cd31281ee27c10c91c1bf2008bebc" name="a609cd31281ee27c10c91c1bf2008bebc"></a>
+static <a class="el" href="classlampda_1_1hal_1_1gpio_1_1DigitalPin.html">hal::gpio::DigitalPin</a>&#160;</td><td class="memItemRight" valign="bottom"><b>YellowColorPin</b> (hal::gpio::DigitalPin::GPIO::gpio7)</td></tr>
+<tr class="separator:a609cd31281ee27c10c91c1bf2008bebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86533251ec09f21025bf59d3945b7589"><td class="memItemLeft" align="right" valign="top"><a id="a86533251ec09f21025bf59d3945b7589" name="a86533251ec09f21025bf59d3945b7589"></a>
 constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>colorKey</b> = <a class="el" href="namespacelampda_1_1utils.html#a7b68e6e95f92e53533b21590af9cc533">utils::hash</a>(&quot;color&quot;)</td></tr>
 <tr class="separator:a86533251ec09f21025bf59d3945b7589"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,8 +306,8 @@ static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>currentBrig
 
 <p>Called to handle button click+hold events for user mode behaviors. </p>
 <p>Default behavior is the "default UI" navigation mode, that supports:</p><ul>
-<li>3 click+hold: configure custom user ramp</li>
-<li>4 click+hold: configure favorite modes</li>
+<li>configure custom user ramp, on the clicks set in <a class="el" href="button__bindings_8h.html" title="User configurable links between click counts and default behaviors.">logic/button_bindings.h</a> (default is 3 click+hold)</li>
+<li>configure favorite modes, on the clicks set in <a class="el" href="button__bindings_8h.html" title="User configurable links between click counts and default behaviors.">logic/button_bindings.h</a> (default is 4 click+hold)</li>
 </ul>
 <p>Event 1H/2H (brightness) is handled by button_hold_callback() in <a class="el" href="inputs_8h.html" title="Handle the logic associated with the input button.">inputs.h</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -324,6 +320,8 @@ static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>currentBrig
 </dl>
 <dl class="section remark"><dt>Remarks</dt><dd>When <code>isEndOfHoldEvent</code> is True, then <code>holdDuration</code> is zero </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>True if an action was handled </dd></dl>
+<p>Keep track of the lock click event</p>
+<p>Keep track of the lock click event</p>
 
 </div>
 </div>
@@ -444,26 +442,26 @@ static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>currentBrig
 
 </div>
 </div>
-<a id="a7c166aecd0393c3af7ee267edb78c9f4" name="a7c166aecd0393c3af7ee267edb78c9f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c166aecd0393c3af7ee267edb78c9f4">&#9670;&#160;</a></span>handle_elk_command()</h2>
+<a id="ac67218c3107c337d14aeda5c994b0a3c" name="ac67218c3107c337d14aeda5c994b0a3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac67218c3107c337d14aeda5c994b0a3c">&#9670;&#160;</a></span>handle_user_command()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void lampda::user::handle_elk_command </td>
+          <td class="memname">void lampda::user::handle_user_command </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structlampda_1_1utils_1_1ELK_1_1Package.html">utils::ELK::Package</a> &amp;&#160;</td>
-          <td class="paramname"><em>elkControlCommand</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="classlampda_1_1common_1_1UserCommand.html">common::UserCommand</a> &amp;&#160;</td>
+          <td class="paramname"><em>setCommand</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handle a ELK BLE package. </p>
+<p>Handle user command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">elkControlCommand</td><td></td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">setCommand</td><td>The command to handle </td></tr>
   </table>
   </dd>
 </dl>
