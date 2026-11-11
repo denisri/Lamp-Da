@@ -382,18 +382,18 @@ struct NudzLadderWellMode : public NudzScrollImageMode<LadderImageTy, Climb_mask
 {
   struct StateTy
   {
-    std::vector<float> minSpeed = {-0.1f, -0.1f};
-    std::vector<float> maxSpeed = {0.1f, 0.1f};
-    std::vector<bool> randomScroll = {false, false};
-    std::vector<uint32_t> xdecal = {0, 0};
-    std::vector<uint32_t> ydecal = {0, 0};
-    std::vector<uint32_t> last_tick = {0, 0};
-    std::vector<int8_t> xdirection = {0, 0};
-    std::vector<int8_t> ydirection = {1, 0};
-    std::vector<bool> framesMirror = {false, true};
-    std::vector<NudzScrollImageMode::FrameSyncMode> syncFrame = {NudzScrollImageMode::Y, NudzScrollImageMode::Y};
-    std::vector<uint32_t> frame = {0, 0};
-    std::vector<uint32_t> last_frame_tick = {0, 0};
+    std::array<float, 2> minSpeed = {-0.1f, -0.1f};
+    std::array<float, 2> maxSpeed = {0.1f, 0.1f};
+    std::array<bool, 2> randomScroll = {false, false};
+    std::array<uint32_t, 2> xdecal = {0, 0};
+    std::array<uint32_t, 2> ydecal = {0, 0};
+    std::array<uint32_t, 2> last_tick = {0, 0};
+    std::array<int8_t, 2> xdirection = {0, 0};
+    std::array<int8_t, 2> ydirection = {1, 0};
+    std::array<bool, 2> framesMirror = {false, true};
+    std::array<NudzScrollImageMode::FrameSyncMode, 2> syncFrame = {NudzScrollImageMode::Y, NudzScrollImageMode::Y};
+    std::array<uint32_t, 2> frame = {0, 0};
+    std::array<uint32_t, 2> last_frame_tick = {0, 0};
   };
 };
 
