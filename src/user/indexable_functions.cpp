@@ -42,7 +42,8 @@ using NudzModes = modes::GroupFor<modes::custom::nudz::NudzHeinekenMode,
                                   modes::custom::nudz::NudzHuitSixMode,
                                   modes::custom::nudz::NudzViolonsaoulsMode,
                                   modes::custom::nudz::NudzBeerGlassMode,
-                                  modes::custom::nudz::NudzLadderWellMode>;
+                                  modes::custom::nudz::NudzLadderWellMode,
+                                  modes::custom::nudz::NudzPonponMode>;
 }
 
 using ManagerTy = modes::ManagerForHiddenGroups<

@@ -400,6 +400,30 @@ struct NudzLadderWellMode : public NudzScrollImageMode<LadderImageTy, Climb_mask
   };
 };
 
+#include "src/generated/corridor.hpp"
+#include "src/generated/ponpon_mask_anim_00.hpp"
+
+/**
+ * \brief Display a scrolling ladder well with a guy climbing the ladder.
+ * User ramp changes scroll speed and direction
+ */
+struct NudzPonponMode : public NudzScrollImageMode<CorridorImageTy, Ponpon_mask_anim_00ImageTy>
+{
+  struct StateTy
+  {
+    std::array<float, 2> minSpeed = {0.f, 0.f};
+    std::array<float, 2> maxSpeed = {0.1f, 0.1f};
+    std::array<bool, 2> randomScroll = {false, false};
+    std::array<uint32_t, 2> xdecal = {0, 0};
+    std::array<uint32_t, 2> ydecal = {0, 0};
+    std::array<uint32_t, 2> last_tick = {0, 0};
+    std::array<int8_t, 2> xdirection = {-1, 0};
+    std::array<int8_t, 2> ydirection = {0, 0};
+    std::array<bool, 2> framesMirror = {false, false};
+    std::array<NudzScrollImageMode::FrameSyncMode, 2> syncFrame = {NudzScrollImageMode::X, NudzScrollImageMode::X};
+  };
+};
+
 /**
  * \brief Display a glass of beer, reactive to gravity.
  * The user ramp changes the beer level
