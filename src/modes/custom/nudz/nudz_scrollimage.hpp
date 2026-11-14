@@ -21,7 +21,6 @@ inline constexpr RampModes operator&(RampModes lhs, RampModes rhs)
   return static_cast<RampModes>(static_cast<T>(lhs) & static_cast<T>(rhs));
 }
 
-
 /**
  * \brief Display one or several overlaid scrolling images.
  * User ramp changes scroll speed and direction.
@@ -424,7 +423,8 @@ struct NudzPomponMode : public NudzScrollImageMode<CorridorImageTy, Pompon_mask_
     std::array<int8_t, 2> xdirection = {1, 1};
     std::array<int8_t, 2> ydirection = {0, 0};
     std::array<bool, 2> framesMirror = {false, false};
-    std::array<NudzScrollImageMode::FrameSyncMode, 2> syncFrame = {NudzScrollImageMode::Time, NudzScrollImageMode::Time};
+    std::array<NudzScrollImageMode::FrameSyncMode, 2> syncFrame = {NudzScrollImageMode::Time,
+                                                                   NudzScrollImageMode::Time};
   };
 };
 
