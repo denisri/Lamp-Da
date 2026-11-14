@@ -411,20 +411,21 @@ struct NudzPomponMode : public NudzScrollImageMode<CorridorImageTy, Pompon_mask_
 {
   struct StateTy
   {
-    std::array<float, 2> minSpeed = {-0.2f, 0.f};
-    std::array<float, 2> maxSpeed = {0.f, 0.2f};
+    A<float> minSpeed = {-0.2f, 0.f};
+    A<float> maxSpeed = {0.f, 0.2f};
     A<float> minFrameSpeed = {0.f, 0.2f};
     A<float> maxFrameSpeed = {0.1f, 0.3f};
-    A<RampModes> rampMode = {ImageSpeed, ImageSpeed}; ///< ramp action mode
-    std::array<bool, 2> randomScroll = {false, false};
-    std::array<uint32_t, 2> xdecal = {0, 0};
-    std::array<uint32_t, 2> ydecal = {0, 0};
-    std::array<uint32_t, 2> last_tick = {0, 0};
-    std::array<int8_t, 2> xdirection = {1, 1};
-    std::array<int8_t, 2> ydirection = {0, 0};
-    std::array<bool, 2> framesMirror = {false, false};
-    std::array<NudzScrollImageMode::FrameSyncMode, 2> syncFrame = {NudzScrollImageMode::Time,
-                                                                   NudzScrollImageMode::Time};
+    A<RampModes> rampMode = {ImageSpeed, ImageSpeed};
+    A<bool> randomScroll = {false, false};
+    A<uint32_t> xdecal = {0, 0};
+    A<uint32_t> ydecal = {0, 0};
+    A<uint32_t> last_tick = {0, 0};
+    A<int8_t> xdirection = {1, 1};
+    A<int8_t> ydirection = {0, 0};
+    A<bool> framesMirror = {false, false};
+    A<NudzScrollImageMode::FrameSyncMode> syncFrame = {NudzScrollImageMode::Time, NudzScrollImageMode::Time};
+    A<uint32_t> frame = {0, 0};
+    A<uint32_t> last_frame_tick = {0, 0};
   };
 };
 
