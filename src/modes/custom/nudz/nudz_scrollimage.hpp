@@ -410,18 +410,21 @@ struct NudzFDCMapMode : public NudzScrollImageMode<FdcImageTy>
 {
   struct StateTy
   {
-    std::array<float, 1> minSpeed = {-0.1f};
-    std::array<float, 1> maxSpeed = {0.1f};
-    std::array<bool, 1> randomScroll = {true};
-    std::array<uint32_t, 1> xdecal = {0};
-    std::array<uint32_t, 1> ydecal = {0};
-    std::array<uint32_t, 1> last_tick = {0};
-    std::array<int8_t, 1> xdirection = {1};
-    std::array<int8_t, 1> ydirection = {1};
-    std::array<bool, 1> framesMirror = {false};
-    std::array<NudzScrollImageMode::FrameSyncMode, 1> syncFrame = {NudzScrollImageMode::Y};
-    std::array<uint32_t, 1> frame = {0};
-    std::array<uint32_t, 1> last_frame_tick = {0};
+    A<float> minSpeed = {-0.1f};
+    A<float> maxSpeed = {0.1f};
+    A<float> minFrameSpeed = {0.f};
+    A<float> maxFrameSpeed = {0.1f};
+    A<RampModes> rampMode = {ImageSpeed};
+    A<bool> randomScroll = {true};
+    A<uint32_t> xdecal = {0};
+    A<uint32_t> ydecal = {0};
+    A<uint32_t> last_tick = {0};
+    A<int8_t> xdirection = {1};
+    A<int8_t> ydirection = {1};
+    A<bool> framesMirror = {false};
+    A<NudzScrollImageMode::FrameSyncMode> syncFrame = {NudzScrollImageMode::Y};
+    A<uint32_t> frame = {0};
+    A<uint32_t> last_frame_tick = {0};
   };
 };
 
