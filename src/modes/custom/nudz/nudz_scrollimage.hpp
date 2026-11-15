@@ -120,7 +120,7 @@ template<typename... ImageTypes> struct NudzScrollImageMode : public BasicMode
     // ease stop at 0
     if (frameSpeed < -frameSpdRange * 0.1)
       frameSpeed += frameSpdRange * 0.1;
-    else if (FrameSpeed > frameSpdRange * 0.1)
+    else if (frameSpeed > frameSpdRange * 0.1)
       frameSpeed -= frameSpdRange * 0.1;
     else
       frameSpeed = 0.f;
@@ -255,6 +255,23 @@ template<typename... ImageTypes> struct NudzScrollImageMode : public BasicMode
 
     uint32_t w = min<uint32_t>(ctx.lamp.maxWidth + 1, imWidth);
     uint32_t h = min<uint32_t>(ctx.lamp.maxHeight, imHeight);
+    int32_t lxoffset = ImageType::x_offset[frame];
+    int32_t lyoffset = ImageType::y_offset[frame];
+    if (w < ctx.lamp.maxWidth + 1)
+    {
+      // if the image is smaller than the lamp screen, it will be fully
+      // drawn (with no offset inside it), but the screen will not be
+      // entirely drawn. Then lamp (screen) offsets apply instead of image
+      // offsets.
+      lxoffset -= xdecal;
+      xdecal = 0;
+    }
+    if (h < ctx.lamp.maxHeight)
+    {
+      lyoffset -= ydecal;
+      ydecal = 0;
+    }
+
     uint32_t lx, ly;
     if (ImageType::colormapSize[frame] == 0)
     {
@@ -264,10 +281,10 @@ template<typename... ImageTypes> struct NudzScrollImageMode : public BasicMode
 
       for (uint32_t y = 0; y < h; ++y)
       {
-        ly = (y + ImageType::y_offset[frame]) % ctx.lamp.maxHeight;
+        ly = (y + lyoffset) % ctx.lamp.maxHeight;
         for (uint32_t x = 0; x < w; ++x)
         {
-          lx = (x + ImageType::x_offset[frame]) % (ctx.lamp.maxWidth + 1);
+          lx = (x + lxoffset) % (ctx.lamp.maxWidth + 1);
           uint32_t color =
                   ImageType::rgbData[((y + ydecal) % imHeight) * imWidth + (x + xdecal) % imWidth + frameOffset];
           if (ImageType::hasAlpha)
@@ -295,11 +312,11 @@ template<typename... ImageTypes> struct NudzScrollImageMode : public BasicMode
       uint8_t bmask = (1 << ImageType::bitsPerPixel[frame]) - 1;
       for (uint32_t y = 0; y < h; ++y)
       {
-        ly = (y + ImageType::y_offset[frame]) % ctx.lamp.maxHeight;
+        ly = (y + lyoffset) % ctx.lamp.maxHeight;
         uint32_t yoffset = ((y + ydecal) % imHeight) * imWidth;
         for (uint32_t x = 0; x < w; ++x)
         {
-          lx = (x + ImageType::x_offset[frame]) % (ctx.lamp.maxWidth + 1);
+          lx = (x + lxoffset) % (ctx.lamp.maxWidth + 1);
           uint32_t offset = yoffset + (x + xdecal) % imWidth;
           uint32_t byteOffset = offset * ImageType::bitsPerPixel[frame] / 8;
           uint32_t bitOffset = (offset * ImageType::bitsPerPixel[frame]) % 8;
